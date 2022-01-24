@@ -1,6 +1,6 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 目录说明
+- test-context：react context API测试
+- test-redux：redux基本测试
 
 ## Available Scripts
 
