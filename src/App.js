@@ -10,16 +10,34 @@ class App extends React.Component {
     return routes;
   };
   render() {
-    
-    console.log({routeConfig});
     return (
-      <BrowserRouter className="App">
-        <this.GetRoutes/>
-        <li><Link to='/test-context'>conext API 测试</Link></li>
-        <li><Link to='/test-redux'>redux 测试</Link></li>
-        <li><Link to='/redux-async'>redux 异步测试</Link></li>
-      </BrowserRouter>
+      <div style={styles.App}>
+        <BrowserRouter>
+          <div style={styles.Content}>
+            <p>目录：</p>
+            <li><Link to='/test-context'>conext API 测试</Link></li>
+            <li><Link to='/test-redux'>redux 测试</Link></li>
+            <li><Link to='/redux-async'>redux 异步测试</Link></li>
+          </div>
+          <div style={styles.Container}>
+            <this.GetRoutes/>
+          </div>
+        </BrowserRouter>
+      </div>
     );
+  }
+}
+
+const styles = {
+  App: {
+    display: 'flex'
+  },
+  Content: {
+    paddingLeft: '15px',
+  },
+  Container: {
+    paddingTop: '10px',
+    flex: '6 1 auto',
   }
 }
 

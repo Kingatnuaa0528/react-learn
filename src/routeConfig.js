@@ -1,13 +1,13 @@
 import React from 'react';
 
-import TestProvider from './component/test-context/TestProvider';
+import ProviderTest from './component/test-context/test.js';
 import ReduxTestComponent from './component/test-redux/test';
 import ReduxAsyncComponent from './component/redux-async/test';
 
 const routes = [
     {
         path: '/test-context',
-        element: <TestProvider/>
+        element: <ProviderTest/>
     },{
         path: '/test-redux',
         element: <ReduxTestComponent/>
