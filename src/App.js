@@ -1,7 +1,6 @@
 import React from 'react';
 import {BrowserRouter, Link, useRoutes} from 'react-router-dom';
 
-import './App.css';
 import routeConfig from './routeConfig';
 
 class App extends React.Component {

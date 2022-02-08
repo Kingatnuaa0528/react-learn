@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
-import fetchReducer from './fetchData';
+import promiseMiddleware from 'redux-promise';
+import {fetchReducer} from './fetchData';
 
-const middlewareEnhancer = applyMiddleware(thunkMiddleware);
+const middlewareEnhancer = applyMiddleware(thunkMiddleware, promiseMiddleware);
 export const store = createStore(fetchReducer, middlewareEnhancer);

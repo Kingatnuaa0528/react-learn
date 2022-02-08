@@ -1,8 +1,8 @@
 import React from 'react';
 
-import ProviderTest from './component/test-context/test.js';
-import ReduxTestComponent from './component/test-redux/test';
-import ReduxAsyncComponent from './component/redux-async/test';
+import ProviderTest from './component/test-context/case.js';
+import ReduxTestComponent from './component/test-redux/demo.js';
+import ReduxAsyncComponent from './component/redux-async/demo.js';
 
 const routes = [
     {

@@ -16,7 +16,11 @@ const CollectionComponent = connect(
 
 class ReduxAsyncComponent extends React.Component {
     handleClick() {
-        store.dispatch(fetchData);
+        store.dispatch(fetchData).then((response) => {
+            console.log("response: " + response);
+        }).catch((error) => {
+            console.log("error: " + error);
+        });
     }
     render() {
         return (

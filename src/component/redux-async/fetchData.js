@@ -6,7 +6,7 @@ const initialState = {
     dataStatus: FETCHING
 };
 
-export default function fetchReducer(state = initialState, action) {
+export function fetchReducer(state = initialState, action) {
     switch(action.type) {
         case FETCHING: {
             return {
@@ -35,13 +35,19 @@ export default function fetchReducer(state = initialState, action) {
     }
 }
 
-export async function fetchData(dispatch, getState) {
-    console.log("In fetchData! ");
+export function fetchData(dispatch) {
     dispatch({ type: FETCHING });
-    await new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         /* 模拟异步操作成功，这样可以通过fetch调接口获取数据 */
+        var randomNumber = Math.random() * 2;
         setTimeout(() => {
-            dispatch({ type: FETCH_SUCCESS, payload: "Hello React!" });
+            if(randomNumber <= 2) {
+                dispatch({ type: FETCH_SUCCESS, payload: "You win! Number is less than 1!" });
+                resolve("number is less than 1!");
+            } else {
+                dispatch({ type: FETCH_SUCCESS, payload: "You lose! Number is more than 1!" });
+                reject("number is more than 1!")
+            }
         }, 1000);
       });
 }
