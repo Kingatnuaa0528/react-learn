@@ -1,5 +1,5 @@
 import React from 'react';
-import { FETCHING, FETCH_SUCCESS, FETCH_FAIL } from './action'
+import { FETCHING, FETCH_SUCCESS, FETCH_FAIL } from './fetchData'
 
 class UIComponent extends React.Component {
     render() {
